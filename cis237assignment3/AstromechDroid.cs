@@ -6,13 +6,11 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Program
+    class AstromechDroid: UtilityDroid
     {
-        static void Main(string[] args)
-        {
+        private bool _hasToolbox;
+        private bool _hasComputerConnector;
+        private bool _hasUtilityArm;
 
-
-
-        }
     }
 }

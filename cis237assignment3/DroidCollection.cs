@@ -6,13 +6,7 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Program
+    class DroidCollection
     {
-        static void Main(string[] args)
-        {
-
-
-
-        }
     }
 }

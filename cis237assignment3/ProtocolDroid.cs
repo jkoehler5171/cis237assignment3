@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace cis237assignment3
 {
-    class Program
+    class ProtocolDroid : Droid
     {
-        static void Main(string[] args)
-        {
+        private int _numberOfLanguages;
 
+        private const int PRICE_PER_LANGUAGE = 2000;
 
+        
 
-        }
     }
 }
