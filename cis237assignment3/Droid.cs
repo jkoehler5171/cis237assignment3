@@ -20,6 +20,7 @@ namespace cis237assignment3
             this._droidModel = DroidModel;
             this._droidMaterial = DroidMaterial;
             this._droidColor = DroidColor;
+            CalculateTotalCost();
         }
         
         public Droid()
@@ -53,6 +54,35 @@ namespace cis237assignment3
 
         public virtual void CalculateTotalCost()
         {
+            switch(_droidModel)
+            {
+                case "Protocol":
+                    _baseCost = 5000;
+                    break;
+                case "Janitor":
+                    _baseCost = 1000;
+                    break;
+                case "Astromech":
+                    _baseCost = 4000;
+                    break;
+                default:
+                    break;
+            }
+            switch(_droidMaterial)
+            {
+                case "Plastoid":
+                    _baseCost += 500;
+                    break;
+                case "Durasteel":
+                    _baseCost += 1500;
+                    break;
+                case "Bronzium":
+                    _baseCost += 5000;
+                    break;
+                default:
+                    break;
+            }
+
             _totalCost = _baseCost;
         }
 

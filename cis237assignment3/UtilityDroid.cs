@@ -18,6 +18,7 @@ namespace cis237assignment3
             this._hasToolbox = HasToolbox;
             this._hasComputerConnector = HasComputer;
             this._hasUtilityArm = hasArm;
+            CalculateTotalCost();
         }
 
         public bool HasToolbox

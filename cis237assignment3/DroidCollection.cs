@@ -19,37 +19,40 @@ namespace cis237assignment3
 
         public void addDroid(string DroidModel, string DroidMaterial, string DroidColor, int NoOfLanguages)
         {
-            droids[currentIndex++] = new ProtocolDroid(DroidModel, DroidMaterial, DroidColor, NoOfLanguages);
+            droids[currentIndex] = new ProtocolDroid(DroidModel, DroidMaterial, DroidColor, NoOfLanguages);
+            currentIndex++;
         }
 
         public void addDroid(string DroidModel, string DroidMaterial, string DroidColor, bool HasToolbox, bool HasComputer, bool HasArm, bool HasTrash, bool HasVacuum)
         {
-            droids[currentIndex++] = new JanitorDroid(DroidModel, DroidMaterial, DroidColor, HasToolbox, HasComputer, HasArm, HasTrash, HasVacuum);
+            droids[currentIndex] = new JanitorDroid(DroidModel, DroidMaterial, DroidColor, HasToolbox, HasComputer, HasArm, HasTrash, HasVacuum);
+            currentIndex++;
         }
 
         public void addDroid(string DroidModel, string DroidMaterial, string DroidColor, bool HasToolbox, bool HasComputer, bool HasArm, bool HasExtinguisher, int NumberShips)
         {
-            droids[currentIndex++] = new AstromechDroid(DroidModel, DroidMaterial, DroidColor, HasToolbox, HasComputer, HasArm, HasExtinguisher, NumberShips);
+            droids[currentIndex] = new AstromechDroid(DroidModel, DroidMaterial, DroidColor, HasToolbox, HasComputer, HasArm, HasExtinguisher, NumberShips);
+            currentIndex++;
         }
 
         public void PrintDroidList()
         {
-            bool exitBoolean = false;
+            
             int indexCounter = 0;
 
-            while (exitBoolean != true)
-            {
-                if(droids[indexCounter].ToString() != null)
-                {
+            while (indexCounter < currentIndex)
+            {                
                     Console.WriteLine(droids[indexCounter].ToString());
-                    indexCounter++;
-                }
-                else
-                {
-                    Console.WriteLine("End of List");
-                    exitBoolean = true;
-                }
+                    indexCounter++;               
             }
+            Console.WriteLine("End of List");
         }
+
+        public string PrintCurrentDroid()
+        {
+            return droids[currentIndex - 1].ToString();
+        }
+
+     
     }
 }

@@ -10,11 +10,13 @@ namespace cis237assignment3
     {
         static void Main(string[] args)
         {
-            DroidCollection[] droids = new DroidCollection[100];
+            DroidCollection droids = new DroidCollection();
 
             UserInterface ui = new UserInterface(droids);
 
+            ui.MainMenu(droids);
 
+            Environment.Exit(0);
 
         }
     }

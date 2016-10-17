@@ -15,6 +15,7 @@ namespace cis237assignment3
         public ProtocolDroid(string DroidModel, string DroidMaterial, string DroidColor, int NoOfLanguages):base(DroidModel, DroidMaterial, DroidColor)
         {
             this._numberOfLanguages = NoOfLanguages;
+            CalculateTotalCost();
         }
 
         public int NoOfLangauges

@@ -18,6 +18,7 @@ namespace cis237assignment3
         {
             this._hasFireExtinguisher = HasExtinguisher;
             this._numberOfShips = NumberShips;
+            CalculateTotalCost();
         }
         
         public bool HasExtinguisher

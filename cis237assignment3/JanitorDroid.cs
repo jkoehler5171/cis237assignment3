@@ -16,6 +16,7 @@ namespace cis237assignment3
         {
             this._hasTrashCompactor = HasTrash;
             this._hasVacuum = HasVacuum;
+            CalculateTotalCost();
         }
 
         public bool HasTrash
