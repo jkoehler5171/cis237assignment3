@@ -8,6 +8,12 @@ namespace cis237assignment3
 {
     class UserInterface
     {
+        public UserInterface(DroidCollection[] droids)
+        {
+
+        }
+
+
         public void MainMenu()
         {
             Boolean exitBool = false;
@@ -33,7 +39,7 @@ namespace cis237assignment3
 
                             break;
                         case 2:
-
+                            
                             break;
                         case 3:
                             exitBool = true;
@@ -70,13 +76,13 @@ namespace cis237assignment3
                     switch (choiceInt)
                     {
                         case 1:
-
+                        ProtocolSelected();
                             break;
                         case 2:
-
+                        AstromechSelected();
                             break;
                         case 3:
-
+                        JanitorSelected();
                             break;                      
                         default:
                             InvalidSelectionMessage();
@@ -94,17 +100,59 @@ namespace cis237assignment3
 
         private void ProtocolSelected()
         {
-            
+            string droidModel = "Protocol";
+            Console.WriteLine();
+            Console.WriteLine("Protocol Droid Selected");
+            Console.WriteLine();
+
+            string droidMaterial = MaterialQuestion();
+            string droidColor = ColorQuestion();
+            int droidLanguages = LangaugesQuestion();
+
+            Console.WriteLine();
+            Console.WriteLine("Exellent! You have added the following droid to the order list");
+            Console.WriteLine();
         }
 
         private void JanitorSelected()
         {
+            string droidModel = "Janitor";
+            Console.WriteLine();
+            Console.WriteLine("Protocol Droid Selected");
+            Console.WriteLine();
 
+            string droidMaterial = MaterialQuestion();
+            string droidColor = ColorQuestion();
+            bool droidToolbox = ToolboxQuestion();
+            bool droidComputer = ComputerQuestion();
+            bool droidArm = ArmQuestion();
+            bool droidCompactor = TrashQuestion();
+            bool droidVacuum = VacuumQuestion();
+
+            Console.WriteLine();
+            Console.WriteLine("Exellent! You have added the following droid to the order list");
+            Console.WriteLine();
         }
 
         private void AstromechSelected()
         {
+            string droidModel = "Astromech";
+            Console.WriteLine();
+            Console.WriteLine("Protocol Droid Selected");
+            Console.WriteLine();
 
+            string droidMaterial = MaterialQuestion();
+            string droidColor = ColorQuestion();
+            bool droidToolbox = ToolboxQuestion();
+            bool droidComputer = ComputerQuestion();
+            bool droidArm = ArmQuestion();
+            bool droidExtinguisher = ExtingisherQuestion();
+            int droidShips = ShipsQuestion();
+            
+
+            Console.WriteLine();
+            Console.WriteLine("Exellent! You have added the following droid to the order list");
+            Console.WriteLine();
         }
 
         private string MaterialQuestion()
