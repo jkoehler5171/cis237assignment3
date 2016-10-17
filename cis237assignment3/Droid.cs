@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Jordan Koehler
+//TR 3:30 to 5:45
+//Oct 17th 2016
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,7 +19,7 @@ namespace cis237assignment3
         protected decimal _baseCost; 
         protected decimal _totalCost;
 
-        public Droid (string DroidModel, string DroidMaterial, string DroidColor)
+        public Droid (string DroidModel, string DroidMaterial, string DroidColor) //Basic Constructor for all Droid types.
         {
             this._droidModel = DroidModel;
             this._droidMaterial = DroidMaterial;
@@ -52,7 +56,7 @@ namespace cis237assignment3
            set { _totalCost = value; }
         }
 
-        public virtual void CalculateTotalCost()
+        public virtual void CalculateTotalCost()//Begins calculating Total Cost by setting the base cost. Base Cost is determined by Model and Material
         {
             switch(_droidModel)
             {
@@ -88,7 +92,7 @@ namespace cis237assignment3
 
        
 
-        public override string ToString()
+        public override string ToString()//Basic ToString Override that all other droids start with.
         {
             return  "Model: " + this._droidModel + " Material:  " + this._droidMaterial + " Color: " + this._droidColor;
         }

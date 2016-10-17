@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Jordan Koehler
+//TR 3:30 to 5:45
+//Oct 17th 2016
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -10,10 +14,10 @@ namespace cis237assignment3
     {
         protected bool _hasToolbox;
         protected bool _hasComputerConnector;
-        protected bool _hasUtilityArm;
+        protected bool _hasUtilityArm; 
 
         public UtilityDroid(string DroidModel, string DroidMaterial, string DroidColor, bool HasToolbox, bool HasComputer, bool hasArm): 
-            base(DroidModel, DroidMaterial, DroidColor)
+            base(DroidModel, DroidMaterial, DroidColor) //Constructor for Utility droids. Inherits from Droid.
         {
             this._hasToolbox = HasToolbox;
             this._hasComputerConnector = HasComputer;
@@ -40,7 +44,7 @@ namespace cis237assignment3
             set { _hasUtilityArm = value; }
         }
 
-        public override void CalculateTotalCost()
+        public override void CalculateTotalCost() //Method to calculate the total cost. Inherits from Droid.
         {
             base.CalculateTotalCost();
             if(_hasToolbox)
@@ -57,7 +61,7 @@ namespace cis237assignment3
             }
         }
 
-        public override string ToString()
+        public override string ToString() // Override for ToString.
         {
             return base.ToString() + " ToolBox: " + this._hasToolbox + " Computer Interface: " + this._hasToolbox + " Utility Arm: " + this._hasToolbox;
         }

@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Jordan Koehler
+//TR 3:30 to 5:45
+//Oct 17th 2016
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +18,7 @@ namespace cis237assignment3
         }
 
 
-        public void MainMenu(DroidCollection droids)
+        public void MainMenu(DroidCollection droids) // The Main menu of the user inteface. Uses a Swtich/Case Structure
         {
             Boolean exitBool = false;
             int choiceInt = 0;
@@ -56,7 +60,7 @@ namespace cis237assignment3
             }
         }
 
-        private void AddDroidType(DroidCollection droids)
+        private void AddDroidType(DroidCollection droids) //User Menu for Adding Droids. Swtich/Case
         {
            
             int choiceInt = 0;
@@ -65,7 +69,7 @@ namespace cis237assignment3
                 Console.WriteLine();
                 Console.WriteLine("What type of droid would you like to add?");
                 Console.WriteLine();
-                Console.WriteLine("1) Protocol Droid");
+                Console.WriteLine("1) Protocol Droid");                
                 Console.WriteLine("2) AstroMech Droid");
                 Console.WriteLine("3) Janitor Droid");
 
@@ -104,7 +108,7 @@ namespace cis237assignment3
             
         }
 
-        private void ProtocolSelected(DroidCollection droids)
+        private void ProtocolSelected(DroidCollection droids) //Method for Adding a Protocol Droid. Pulls up a method containing each question.
         {
             string droidModel = "Protocol";
             Console.WriteLine();
@@ -123,7 +127,7 @@ namespace cis237assignment3
             Console.WriteLine();
         }
 
-        private void JanitorSelected(DroidCollection droids)
+        private void JanitorSelected(DroidCollection droids)//Method for adding a Janitor Droid
         {
             string droidModel = "Janitor";
             Console.WriteLine();
@@ -147,7 +151,7 @@ namespace cis237assignment3
             Console.WriteLine();
         }
 
-        private void AstromechSelected(DroidCollection droids)
+        private void AstromechSelected(DroidCollection droids) //Method for adding an Astromech Droid
         {
             string droidModel = "Astromech";
             Console.WriteLine();
@@ -170,7 +174,7 @@ namespace cis237assignment3
             Console.WriteLine();
         }
 
-        private string MaterialQuestion()
+        private string MaterialQuestion()//User question for determining material
         {
             int choiceInt = 0;
             bool exitBool = false;
@@ -217,7 +221,7 @@ namespace cis237assignment3
 
         }
             
-        private string ColorQuestion()
+        private string ColorQuestion()//User question for determining droid color
         {
             int choiceInt = 0;
             bool exitBool = false;
@@ -265,7 +269,7 @@ namespace cis237assignment3
         }
 
 
-        private int LangaugesQuestion()
+        private int LangaugesQuestion()//User question for determining number of languages spoken by a protocol droid
         {
             int numberOfLanguagesInt = 1;
             bool exitBool = false;
@@ -297,7 +301,7 @@ namespace cis237assignment3
             return numberOfLanguagesInt;
         }
 
-        private int ShipsQuestion()
+        private int ShipsQuestion()//User question for determining number of compatible ships for Astromech droids
         {
             int numberOfShipsInt = 1;
             bool exitBool = false;
@@ -329,7 +333,7 @@ namespace cis237assignment3
             return numberOfShipsInt;
         }
 
-        private bool ToolboxQuestion()
+        private bool ToolboxQuestion()//User question for determining if the droid is equipped with a toolbox
         {
             int choiceInt;
             bool exitBool = false;
@@ -368,7 +372,7 @@ namespace cis237assignment3
             
         }
 
-        private bool ComputerQuestion()
+        private bool ComputerQuestion()//User question for determining if the droid is equipped with a computer interface
         {
             int choiceInt;
             bool exitBool = false;
@@ -407,7 +411,7 @@ namespace cis237assignment3
 
         }
 
-        private bool ArmQuestion()
+        private bool ArmQuestion()//User question for determining if the droid is equipped with a multi-use utility arm
         {
             int choiceInt;
             bool exitBool = false;
@@ -447,7 +451,7 @@ namespace cis237assignment3
         }
 
 
-        private bool TrashQuestion()
+        private bool TrashQuestion()//User question for determining if the droid is equipped with a trash compactor
         {
             int choiceInt;
             bool exitBool = false;
@@ -486,7 +490,7 @@ namespace cis237assignment3
 
         }
 
-        private bool VacuumQuestion()
+        private bool VacuumQuestion()//User question for determining if the droid is equipped with a vacuum
         {
             int choiceInt;
             bool exitBool = false;
@@ -525,7 +529,7 @@ namespace cis237assignment3
 
         }
 
-        private bool ExtingisherQuestion()
+        private bool ExtingisherQuestion()//User question for determining if the droid is equipped with a fire extinguisher
         {
             int choiceInt;
             bool exitBool = false;
@@ -564,7 +568,7 @@ namespace cis237assignment3
 
         }
         
-        private void InvalidSelectionMessage()
+        private void InvalidSelectionMessage()//Message to be displayed upon an invalid entry.
         {
             Console.WriteLine();
             Console.WriteLine("Please enter a valid option.");

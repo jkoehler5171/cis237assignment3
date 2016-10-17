@@ -1,4 +1,8 @@
-﻿using System;
+﻿//Jordan Koehler
+//TR 3:30 to 5:45
+//Oct 17th 2016
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +18,7 @@ namespace cis237assignment3
         private int COST_PER_SHIP = 50;
 
         public AstromechDroid(string DroidModel, string DroidMaterial, string DroidColor, bool HasToolbox, bool HasComputer, bool HasArm, bool HasExtinguisher, int NumberShips)
-            :base(DroidModel, DroidMaterial, DroidColor,HasToolbox, HasComputer, HasArm)
+            :base(DroidModel, DroidMaterial, DroidColor,HasToolbox, HasComputer, HasArm)// Constructor for an Astromech Droid.
         {
             this._hasFireExtinguisher = HasExtinguisher;
             this._numberOfShips = NumberShips;
@@ -33,7 +37,7 @@ namespace cis237assignment3
             set { _numberOfShips = value; }
         }
 
-        public override void CalculateTotalCost()
+        public override void CalculateTotalCost() //Calculates total cost. Inherits from Utility Droid.
         {
             base.CalculateTotalCost();
             if(_hasFireExtinguisher)
@@ -44,7 +48,7 @@ namespace cis237assignment3
 
         }
 
-        public override string ToString()
+        public override string ToString() //Override for ToString.
         {
             return base.ToString() + " Fire Extinguisher: " + this._hasFireExtinguisher + " # Of Compatible Ships: " + this._numberOfShips +
                 " Base Cost: " + _baseCost + " Total Cost: " + _totalCost;
