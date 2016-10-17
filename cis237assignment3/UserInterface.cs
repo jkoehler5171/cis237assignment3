@@ -72,6 +72,7 @@ namespace cis237assignment3
                 Console.WriteLine("1) Protocol Droid");                
                 Console.WriteLine("2) AstroMech Droid");
                 Console.WriteLine("3) Janitor Droid");
+                Console.WriteLine("4) Utility Droid");
 
             while (exitBool != true)
             {
@@ -93,15 +94,18 @@ namespace cis237assignment3
                             JanitorSelected(droids);
                             exitBool = true;
                             break;
+                        case 4:
+                            UtilitySelected(droids);
+                            exitBool = true;
+                            break;
                         default:
                             InvalidSelectionMessage();
                             break;
                     }
                 }
-                catch(Exception e)
+                catch
                 {
-                    InvalidSelectionMessage();
-                    Console.WriteLine(e);
+                    InvalidSelectionMessage();                    
                 }
             }
 
@@ -167,6 +171,27 @@ namespace cis237assignment3
             int droidShips = ShipsQuestion();
 
             droids.addDroid(droidModel, droidMaterial, droidColor, droidToolbox, droidComputer, droidArm, droidExtinguisher, droidShips);
+
+            Console.WriteLine();
+            Console.WriteLine("Exellent! You have added a new droid to the order list");
+            Console.WriteLine(droids.PrintCurrentDroid());
+            Console.WriteLine();
+        }
+
+        private void UtilitySelected(DroidCollection droids) //Method for adding a Utility Droid
+        {
+            string droidModel = "Utility";
+            Console.WriteLine();
+            Console.WriteLine("Utility Droid Selected");
+            Console.WriteLine();
+
+            string droidMaterial = MaterialQuestion();
+            string droidColor = ColorQuestion();
+            bool droidToolbox = ToolboxQuestion();
+            bool droidComputer = ComputerQuestion();
+            bool droidArm = ArmQuestion();          
+
+            droids.addDroid(droidModel, droidMaterial, droidColor, droidToolbox, droidComputer, droidArm);
 
             Console.WriteLine();
             Console.WriteLine("Exellent! You have added a new droid to the order list");

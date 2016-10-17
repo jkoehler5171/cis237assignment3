@@ -38,7 +38,7 @@ namespace cis237assignment3
 
         public override string ToString()// Override for ToString.
         {
-            return base.ToString() + " # of Languages: " + this._numberOfLanguages + " Base Cost: " + _baseCost + " Total Cost: " + _totalCost;
+            return base.ToString() + " # of Languages: " + this._numberOfLanguages + " Base Cost: " + _baseCost + " Total Cost : " + _totalCost; 
         }
 
         

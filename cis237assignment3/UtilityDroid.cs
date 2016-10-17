@@ -63,7 +63,15 @@ namespace cis237assignment3
 
         public override string ToString() // Override for ToString.
         {
-            return base.ToString() + " ToolBox: " + this._hasToolbox + " Computer Interface: " + this._hasToolbox + " Utility Arm: " + this._hasToolbox;
+            if (_droidModel == "Utility")
+            {
+                return base.ToString() + " ToolBox: " + this._hasToolbox + " Computer Interface: " + this._hasToolbox + " Utility Arm: " + this._hasToolbox + 
+                    " Base Cost: " + _baseCost + " Total Cost : " + _totalCost;
+            }
+            else
+            {
+                return base.ToString() + " ToolBox: " + this._hasToolbox + " Computer Interface: " + this._hasToolbox + " Utility Arm: " + this._hasToolbox;
+            }
         }
     }
 }

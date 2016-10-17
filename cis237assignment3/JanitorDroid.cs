@@ -51,7 +51,7 @@ namespace cis237assignment3
         public override string ToString()//Overrides ToString.
         {
             return base.ToString() + " Trash Compactor: " + this._hasTrashCompactor + " Vacuum: " + this._hasTrashCompactor +
-                " Base Cost: " + _baseCost + " Total Cost: " + _totalCost;
+                " Base Cost: " + _baseCost + " Total Cost : " + _totalCost; 
         }
 
     }

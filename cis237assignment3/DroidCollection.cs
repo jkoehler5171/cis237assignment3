@@ -39,6 +39,12 @@ namespace cis237assignment3
             currentIndex++;
         }
 
+        public void addDroid(string DroidModel, string DroidMaterial, string DroidColor, bool HasToolbox, bool HasComputer, bool HasArm)
+        {
+            droids[currentIndex] = new UtilityDroid(DroidModel, DroidMaterial, DroidColor, HasToolbox, HasComputer, HasArm);
+            currentIndex++;
+        }
+
         public void PrintDroidList()// Prints the current array of Droids.
         {
             

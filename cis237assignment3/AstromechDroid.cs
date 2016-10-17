@@ -51,7 +51,7 @@ namespace cis237assignment3
         public override string ToString() //Override for ToString.
         {
             return base.ToString() + " Fire Extinguisher: " + this._hasFireExtinguisher + " # Of Compatible Ships: " + this._numberOfShips +
-                " Base Cost: " + _baseCost + " Total Cost: " + _totalCost;
+                " Base Cost: " + _baseCost + " Total Cost : " + _totalCost; 
         }
 
     }

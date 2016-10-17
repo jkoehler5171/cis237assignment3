@@ -23,14 +23,15 @@ namespace cis237assignment3
         {
             this._droidModel = DroidModel;
             this._droidMaterial = DroidMaterial;
-            this._droidColor = DroidColor;
+            this._droidColor = DroidColor;            
             CalculateTotalCost();
         }
         
-        public Droid()
+        public decimal BaseCost
         {
-
-        }
+            get { return _baseCost; }
+            set { _baseCost = value; }
+        }     
 
         public string DroidModel
         {
@@ -64,10 +65,14 @@ namespace cis237assignment3
                     _baseCost = 5000;
                     break;
                 case "Janitor":
-                    _baseCost = 1000;
+                    _baseCost = 3000;
                     break;
-                case "Astromech":
+                case "Astromech":                    
                     _baseCost = 4000;
+                    break;
+                case "Utility":
+                    _baseCost = 2000;
+                    
                     break;
                 default:
                     break;
