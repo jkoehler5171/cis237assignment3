@@ -2,7 +2,7 @@
 ## Due: 10-18-2016
 
 ## Author
-
+Jordan Koehler
 
 
 ## Description
@@ -114,7 +114,8 @@ It may be beneficial for you to create extra methods within the droid sub classe
 | Total                      | 100    |
 
 ## Outside Resources Used
-
+Previous Programs
 
 
 ## Known Problems, Issues, And/Or Errors in the Program
+Output is pretty dang ugly. Works fine as far as I can tell though.
